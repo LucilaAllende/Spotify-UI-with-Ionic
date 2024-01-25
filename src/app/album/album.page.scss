@@ -21,3 +21,24 @@ ion-title, ion-content {
     font-weight: bold;
   }
 }
+
+.image-box {
+  position: fixed;
+  z-index: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+}
+
+ion-row {
+  padding-top: 40vh;
+}
+
+ion-content {
+  --background: linear-gradient(var(--custombg) 400px, var(--ion-color-dark) 400px);
+}
+
+.main {
+  z-index: 2;
+  background: linear-gradient(var(--custombg) 20%, var(--ion-color-dark) 30%);
+}
