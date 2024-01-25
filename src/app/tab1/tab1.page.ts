@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import recentlyPlayed from '../../assets/data/recentlyPlayed.json';
 import heavyRotation from '../../assets/data/heavyRotation.json';
 import jumpBackIn from '../../assets/data/jumpBackIn.json';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -26,7 +27,9 @@ export class Tab1Page {
     },
   ]
 
-  constructor() {}
+  constructor(
+    private router: Router,
+  ) {}
 
   // Helper function for images names
   dasherize(str: string) {
@@ -36,7 +39,8 @@ export class Tab1Page {
   }
 
   openAlbum(album: { id: number; image: string; title: string; }) {
-    console.log(album);
+    const titleEscaped = encodeURIComponent(album.title);
+    this.router.navigateByUrl(`/tabs/tab1/${titleEscaped}`);
   }
 
 }
