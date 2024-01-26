@@ -7,8 +7,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="data" [style.--custombg]="data.backgroundColor">
-  <div class="ion-text-center image-box">
+<ion-content 
+  *ngIf="data" 
+  [style.--custombg]="data.backgroundColor"
+  [appImageFade]="cover"
+  [fullscreen]="true"
+  scrollEvents="true"
+>
+  <div class="ion-text-center image-box" #cover>
     <img [src]="'/assets/images/albums/'+dasherize(data.image)+'.jpg'" alt="name album" >
   </div>
   <div class="main">

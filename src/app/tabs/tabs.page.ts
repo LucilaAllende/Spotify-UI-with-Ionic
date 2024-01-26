@@ -15,7 +15,6 @@ export class TabsPage {
   constructor() {}
 
   setSelectedTab() {
-    console.log('setSelectedTab');
     this.selected = this.tabs.getSelected();
   }
 
