@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import albums from 'src/assets/data/albums';
+import { SharedUtilsService } from '../services/shared-utils.service';
 
 export interface Track {
   title: string;
@@ -27,6 +28,7 @@ export class AlbumPage implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
+    private sharedUtilsService: SharedUtilsService
   ) { }
 
   ngOnInit() {
@@ -35,11 +37,8 @@ export class AlbumPage implements OnInit {
     this.data = albums[decodeTitle]
   }
 
-    // Helper function for images names
-    dasherize(str: string) {
-      return str.replace(/[A-Z]/g, function (char, index) {
-        return (index!==0 ? '-': '') + char.toLowerCase();
-      })
-    }
+  dasherize(str: string) {
+    return this.sharedUtilsService.dasherize(str);
+  }
 
 }

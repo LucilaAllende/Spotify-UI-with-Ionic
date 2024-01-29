@@ -4,6 +4,7 @@ import recentlyPlayed from '../../assets/data/recentlyPlayed.json';
 import heavyRotation from '../../assets/data/heavyRotation.json';
 import jumpBackIn from '../../assets/data/jumpBackIn.json';
 import { Router } from '@angular/router';
+import { SharedUtilsService } from '../services/shared-utils.service';
 
 @Component({
   selector: 'app-tab1',
@@ -29,13 +30,11 @@ export class Tab1Page {
 
   constructor(
     private router: Router,
+    private sharedUtilsService: SharedUtilsService
   ) {}
 
-  // Helper function for images names
   dasherize(str: string) {
-    return str.replace(/[A-Z]/g, function (char, index) {
-      return (index!==0 ? '-': '') + char.toLowerCase();
-    })
+    return this.sharedUtilsService.dasherize(str);
   }
 
   openAlbum(album: { id: number; image: string; title: string; }) {
