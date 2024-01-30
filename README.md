@@ -2,9 +2,9 @@
 
 Este proyecto es una implementación del diseño de la interfaz de usuario de Spotify utilizando Ionic.
 
-# Contenido del Video
+# Contenido del Respositorio
 
-El video tutorial "Building the Spotify UI with Ionic" aborda la implementación detallada de la interfaz de usuario de Spotify utilizando el framework Ionic. A continuación, se describen los aspectos clave cubiertos en el tutorial:
+El repostorio "Spotify UI with Ionic" aborda la implementación detallada de la interfaz de usuario de Spotify utilizando el framework Ionic. A continuación, se describen los aspectos clave cubiertos:
 
 - **Setting up the Ionic App:** Configuración inicial del proyecto Ionic, incluyendo la instalación y configuración.
 
@@ -28,11 +28,11 @@ El video tutorial "Building the Spotify UI with Ionic" aborda la implementación
 
 ## Instrucciones para Ejecutar
 
-1. Clona el repositorio: `git clone URL_DEL_REPOSITORIO`
+1. Clona el repositorio: `git clone git@github.com:LucilaAllende/Spotify-UI-with-Ionic.git`
 2. Instala las dependencias: `npm install`
-3. Inicia la aplicación: `ionic serve`
+3. Inicia la aplicación: `ionic serve` o `npm run start`
 
 ## Notas Adicionales
 
 - Asegúrate de tener Node.js y Ionic instalados.
-- Para obtener más detalles sobre cada sección, consulta el video tutorial.
+- Para obtener más detalles sobre cada sección, consulta el video tutorial https://www.youtube.com/watch?v=sdrw15el3_w&t=1212s&ab_channel=SimonGrimm.
